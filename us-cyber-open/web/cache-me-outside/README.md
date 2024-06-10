@@ -29,8 +29,8 @@ We can verify in a local docker using redis-cli that our user has been created b
 127.0.0.1:6379> GET user:-1:role
 "unverified"
 ```
-
-Welcome admin! Here you go: SIVUSCG{h0w_b0ut_d4t}
+## Upon logging in:
+`Welcome admin! Here you go: SIVUSCG{h0w_b0ut_d4t}`
 
 We can decode our JWT cookie to see what it looks like:
 eyJsb2dnZWRfaW4iOnRydWUsInJvbGUiOiJ1bnZlcmlmaWVkIiwidXNlcm5hbWUiOi0xfQ.ZmWTNw.xssBgg9qoR0LAB7VqNziuOFEjhs
