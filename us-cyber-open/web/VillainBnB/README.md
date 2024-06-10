@@ -2,8 +2,10 @@
 
 When you create a new listing, give it an image url that you control, that redirects the server to http://127.0.0.1:5000/api/users?username=
 
-This is because the api routes in the code are whitelisted with @localhost_only
+This is because the api routes in the code are whitelisted with @localhost_only.
+
 It also looks for the Content-Type header to make sure it contains the word 'image'
+
 The username parameter is vuln to SQLi
 
 Example of malicious flask server:
